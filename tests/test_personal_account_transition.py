@@ -2,7 +2,7 @@
 # Проверь переход по клику на «Личный кабинет».
 
 from locators.locators import AllLocators
-from url_pages import AllPages
+from url_pages import AllUrls
 from test_data import TestData
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
@@ -11,7 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 def test_login_go_account(chrome_browser):
 
-    chrome_browser.get(AllPages.page_main)
+    chrome_browser.get(AllUrls.page_main)
 
     chrome_browser.find_element(By.XPATH, AllLocators.login_in_acc_button).click()
     WebDriverWait(chrome_browser, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, AllLocators.login_page_text)))

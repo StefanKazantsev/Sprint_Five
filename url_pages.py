@@ -1,4 +1,4 @@
-class AllPages:
+class AllUrls:
     page_main = "https://stellarburgers.nomoreparties.site"
     page_login = f'{page_main}/login'
     page_register = f'{page_main}/register'

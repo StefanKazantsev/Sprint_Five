@@ -2,7 +2,7 @@ import pytest
 import random
 from selenium import webdriver
 
-@pytest.fixture
+@pytest.fixture()
 def chrome_browser():
     driver = webdriver.Chrome()
     driver.maximize_window()
@@ -16,14 +16,14 @@ def random_email():
     return email
 
 @pytest.fixture()
-def ok_passwrd():
-    passwrd = random.randint(100000,999999)
-    return passwrd
+def ok_passwd():
+    passwd = random.randint(100000,999999)
+    return passwd
 
 @pytest.fixture()
-def no_passwrd():
-    passwrd = random.randint(10,99)
-    return passwrd
+def no_passwd():
+    passwd = random.randint(10,99)
+    return passwd
 
 @pytest.fixture()
 def name_user_for_register():
